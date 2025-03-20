@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.greeting {
+    font-size: 3rem;
+    color: #FF0000;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(14), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #FF0000;
+    }
+}
+
+.greeting::after {
+    content: '';
+    display: inline-block;
+    border-right: 2px solid #FF0000;
+    animation: blink-caret 0.75s step-end infinite;
+}
